@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HERSKY Stitched — Premium Embroidered Clothing | The Embroidery Store</title>
+<meta name="description" content="HERSKY Stitched is Jake Hersky's second shop: a curated embroidery-only store on Fourthwall. Premium heavyweight blanks — Stanley/Stella, AS Colour, Cotton Heritage, Lane Seven — with the HERSKY lockup stitched, never printed. Prices in USD, shipping included.">
+<style>
+  :root{
+    --cream:#f7f1e5; --cream2:#efe6d3; --ink:#1c1710; --ink2:#4a4234;
+    --thread:#bc4a12; --thread2:#8f3608; --sage:#5c6650; --line:#d8cbae;
+    --card:#fffaf0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
+  .serif{font-family:"Iowan Old Style",Palatino,"Palatino Linotype",Georgia,serif}
+  a{color:var(--thread2)}
+  /* top thread line */
+  .threadline{height:6px;background:repeating-linear-gradient(90deg,var(--thread) 0 26px,transparent 26px 40px)}
+  header{position:sticky;top:0;background:var(--cream);border-bottom:1px solid var(--line);z-index:10}
+  .nav{max-width:1140px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+  .brand{font-size:1.35rem;letter-spacing:.14em;font-weight:700;text-decoration:none;color:var(--ink)}
+  .brand span{color:var(--thread)}
+  .nav nav{display:flex;gap:18px;flex-wrap:wrap;margin-left:auto}
+  .nav nav a{color:var(--ink2);text-decoration:none;font-size:.95rem;min-height:44px;display:inline-flex;align-items:center}
+  .nav nav a:hover{color:var(--thread2);text-decoration:underline}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  /* hero */
+  .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;padding:56px 0 44px;align-items:stretch}
+  .kicker{letter-spacing:.28em;font-size:.78rem;color:var(--thread2);font-weight:700;text-transform:uppercase}
+  h1{font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.02;margin:14px 0 16px;font-weight:700}
+  h1 em{font-style:italic;color:var(--thread)}
+  .lede{font-size:1.13rem;color:var(--ink2);max-width:34rem}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+  .btn{display:inline-flex;align-items:center;min-height:48px;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:700;border:2px solid var(--ink)}
+  .btn-solid{background:var(--ink);color:var(--cream)}
+  .btn-solid:hover{background:var(--thread2);border-color:var(--thread2)}
+  .btn-ghost{background:transparent;color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--thread2);color:var(--thread2)}
+  .hero-note{margin-top:18px;font-size:.92rem;color:var(--ink2)}
+  /* stitch panel */
+  .stitch-panel{background:var(--ink);color:var(--cream);border-radius:18px;padding:30px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+  .stitch-panel::before{content:"";position:absolute;inset:12px;border:2px dashed var(--thread);border-radius:12px;pointer-events:none}
+  .monogram{font-size:clamp(3rem,7vw,4.6rem);letter-spacing:.12em;text-align:center;font-weight:700}
+  .monogram small{display:block;font-size:.85rem;letter-spacing:.4em;color:#e8b48c;margin-top:10px;font-family:-apple-system,"Segoe UI",Roboto,sans-serif;font-weight:600}
+  .stitch-specs{display:flex;justify-content:center;gap:26px;margin-top:26px;flex-wrap:wrap;text-align:center}
+  .stitch-specs div b{display:block;font-size:1.25rem}
+  .stitch-specs div span{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#cfc4ab}
+  .panel-caption{text-align:center;margin-top:20px;font-size:.85rem;color:#cfc4ab}
+  /* sections */
+  section{padding:48px 0}
+  h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin:8px 0 12px}
+  .section-lede{color:var(--ink2);max-width:44rem;margin-bottom:28px}
+  .rule{border:none;border-top:2px dashed var(--line);margin:0}
+  /* product rows */
+  .product{display:grid;grid-template-columns:300px 1fr auto;gap:28px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:20px;align-items:center}
+  .placement{background:var(--cream2);border:2px dashed var(--thread);border-radius:12px;padding:22px;text-align:center}
+  .placement .lockup{font-size:1.5rem;letter-spacing:.16em;font-weight:700}
+  .placement .where{margin-top:8px;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+  .placement .threads{margin-top:14px;display:flex;justify-content:center;gap:7px}
+  .dot{width:16px;height:16px;border-radius:50%;border:1px solid rgba(0,0,0,.25);display:inline-block}
+  .product h3{font-size:1.45rem;margin-bottom:6px}
+  .blank{font-weight:700;color:var(--thread2);font-size:.95rem;letter-spacing:.04em}
+  .specs{margin-top:10px;color:var(--ink2);font-size:.97rem}
+  .specs li{margin-left:18px;margin-bottom:3px}
+  .pricebox{text-align:right}
+  .price{font-size:1.7rem;font-weight:700}
+  .price small{display:block;font-size:.78rem;color:var(--ink2);font-weight:600;letter-spacing:.06em}
+  .reserve{margin-top:12px;display:inline-flex;align-items:center;min-height:48px;padding:10px 18px;background:var(--thread);color:#fff;border-radius:999px;text-decoration:none;font-weight:700;border:2px solid var(--thread)}
+  .reserve:hover{background:var(--thread2)}
+  .drop-tag{display:inline-block;background:var(--sage);color:#fff;font-size:.72rem;letter-spacing:.16em;padding:4px 10px;border-radius:999px;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+  /* tables */
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  th,td{padding:13px 14px;text-align:left;border-bottom:1px solid var(--line);font-size:.97rem;vertical-align:top}
+  th{background:var(--ink);color:var(--cream);letter-spacing:.05em}
+  tr:last-child td{border-bottom:none}
+  td b{color:var(--thread2)}
+  /* process */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .step .num{font-size:2rem;color:var(--thread);font-weight:700}
+  .step h3{margin:8px 0 6px;font-size:1.15rem}
+  .step p{color:var(--ink2);font-size:.95rem}
+  /* faq */
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:12px}
+  summary{font-weight:700;cursor:pointer;min-height:32px}
+  details p{margin-top:8px;color:var(--ink2)}
+  /* footer */
+  footer{background:var(--ink);color:var(--cream);margin-top:40px}
+  .foot{max-width:1140px;margin:0 auto;padding:36px 20px;display:flex;gap:30px;flex-wrap:wrap;justify-content:space-between}
+  footer a{color:#e8b48c}
+  .foot small{color:#cfc4ab;display:block;margin-top:8px;max-width:30rem}
+  @media (max-width:860px){
+    .hero{grid-template-columns:1fr}
+    .product{grid-template-columns:1fr}
+    .pricebox{text-align:left}
+  }
+</style>
+</head>
+<body>
+<div class="threadline" aria-hidden="true"></div>
+<header>
+  <div class="nav">
+    <a class="brand serif" href="index.html">HERSKY <span>STITCHED</span></a>
+    <nav aria-label="Main">
+      <a href="#drop">Drop 01</a>
+      <a href="#materials">Materials</a>
+      <a href="#embroidery">Embroidery</a>
+      <a href="#compare">Compare the stores</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://hersky.info/shop">Current store</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <p class="kicker">Jake Hersky's second shop · A different format</p>
+      <h1 class="serif">Stitched, <em>never printed.</em><br>Built on better cloth.</h1>
+      <p class="lede">hersky.info/shop is the big print catalog — thousands of designs, all-over print. This store is the opposite: a small, curated embroidery drop on premium heavyweight blanks, fulfilled through <strong>Fourthwall</strong>. Fewer pieces. Heavier fabric. Real thread.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="#drop">See Drop 01 — 5 pieces</a>
+        <a class="btn btn-ghost" href="https://hersky.info/shop">Shop the current store</a>
+      </div>
+      <p class="hero-note">Every price on this page is in USD and <strong>includes shipping</strong> — no surprise shipping fee added at checkout. Every piece is made to order.</p>
+    </div>
+    <div class="stitch-panel" role="img" aria-label="Placement diagram: the HERSKY lockup embroidered, shown inside a stitched border">
+      <div class="monogram serif">HERSKY<small>EMBROIDERY LOCKUP</small></div>
+      <div class="stitch-specs">
+        <div><b>240–400</b><span>GSM fabrics</span></div>
+        <div><b>5</b><span>Thread colours</span></div>
+        <div><b>0</b><span>Printed ink</span></div>
+      </div>
+      <p class="panel-caption">Placement diagram — this is the flat embroidery design area, not a photo of a finished garment.</p>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <!-- DROP -->
+  <section id="drop">
+    <p class="kicker">Drop 01 · Embroidery only</p>
+    <h2 class="serif">The first stitched drop</h2>
+    <p class="section-lede">Only designs that survive digitizing get stitched — the clean black-and-white HERSKY lockups. Full-colour artwork stays where it belongs: on the all-over print store. Each piece below names its exact blank, its fabric weight, and where the stitching sits. Reserve by email — no payment is taken on this page.</p>
+
+    <article class="product">
+      <div class="placement"><div class="lockup serif">HERSKY</div><div class="where">Front centre · 3D puff option</div><div class="threads"><span class="dot" style="background:#f3ead8" title="Bone white"></span><span class="dot" style="background:#17130c" title="Ink black"></span><span class="dot" style="background:#bc4a12" title="Thread orange"></span><span class="dot" style="background:#b98a1d" title="Gold"></span></div></div>
+      <div>
+        <span class="drop-tag">Drop 01 · Hats</span>
+        <h3 class="serif">Embroidered Dad Hat</h3>
+        <p class="blank">Premium structured twill cap · Fourthwall embroidery line</p>
+        <ul class="specs">
+          <li>Real embroidery — raised thread, not a printed logo</li>
+          <li>Unstructured dad-hat fit, adjustable strap</li>
+          <li>The cleanest read of the HERSKY lockup at small size</li>
+        </ul>
+      </div>
+      <div class="pricebox"><div class="price">$44.99<small>USD · SHIPPING INCLUDED</small></div><a class="reserve" href="mailto:hersky.ott@gmail.com?subject=Reserve%20Drop%2001%20—%20Embroidered%20Dad%20Hat">Reserve this piece</a></div>
+    </article>
+
+    <article class="product">
+      <div class="placement"><div class="lockup serif">HERSKY</div><div class="where">Left chest · Flat stitch</div><div class="threads"><span class="dot" style="background:#f3ead8" title="Bone white"></span><span class="dot" style="background:#17130c" title="Ink black"></span><span class="dot" style="background:#bc4a12" title="Thread orange"></span><span class="dot" style="background:#3f5a36" title="Forest"></span></div></div>
+      <div>
+        <span class="drop-tag">Drop 01 · Tees</span>
+        <h3 class="serif">Heavyweight Embroidered Tee</h3>
+        <p class="blank">Stanley/Stella &amp; AS Colour class blanks · 240 GSM organic cotton</p>
+        <ul class="specs">
+          <li>240 GSM — the premium streetwear benchmark, roughly double a basic promo tee's hand-feel</li>
+          <li>Left-chest stitched lockup, about 3.5 inches wide</li>
+          <li>Garment holds its shape wash after wash — embroidery outlasts print on heavy cloth</li>
+        </ul>
+      </div>
+      <div class="pricebox"><div class="price">$54.99<small>USD · SHIPPING INCLUDED</small></div><a class="reserve" href="mailto:hersky.ott@gmail.com?subject=Reserve%20Drop%2001%20—%20Heavyweight%20Embroidered%20Tee">Reserve this piece</a></div>
+    </article>
+
+    <article class="product">
+      <div class="placement"><div class="lockup serif">HERSKY</div><div class="where">Left chest · Flat stitch</div><div class="threads"><span class="dot" style="background:#f3ead8" title="Bone white"></span><span class="dot" style="background:#bc4a12" title="Thread orange"></span><span class="dot" style="background:#b98a1d" title="Gold"></span></div></div>
+      <div>
+        <span class="drop-tag">Drop 01 · Hoodies</span>
+        <h3 class="serif">Premium Embroidered Hoodie</h3>
+        <p class="blank">Cotton Heritage / Lane Seven class fleece · 8.5 oz heavyweight</p>
+        <ul class="specs">
+          <li>Ring-spun cotton blend fleece (65% ring-spun cotton / 35% polyester class)</li>
+          <li>Heavyweight 8.5 oz fabric — the blank festival crews actually re-order</li>
+          <li>Stitched chest lockup; no cracked prints, ever</li>
+        </ul>
+      </div>
+      <div class="pricebox"><div class="price">$89.99<small>USD · SHIPPING INCLUDED</small></div><a class="reserve" href="mailto:hersky.ott@gmail.com?subject=Reserve%20Drop%2001%20—%20Premium%20Embroidered%20Hoodie">Reserve this piece</a></div>
+    </article>
+
+    <article class="product">
+      <div class="placement"><div class="lockup serif">HERSKY</div><div class="where">Left chest · Flat stitch</div><div class="threads"><span class="dot" style="background:#f3ead8" title="Bone white"></span><span class="dot" style="background:#17130c" title="Ink black"></span><span class="dot" style="background:#3f5a36" title="Forest"></span></div></div>
+      <div>
+        <span class="drop-tag">Drop 01 · Crewnecks</span>
+        <h3 class="serif">Embroidered Crewneck Sweatshirt</h3>
+        <p class="blank">Lane Seven / Independent Trading Co. class premium fleece</p>
+        <ul class="specs">
+          <li>Mid-to-heavyweight fleece with a clean, structured drape</li>
+          <li>Tonal thread options — the quiet, premium version of the brand</li>
+          <li>Built for the studio and the booth, not fast fashion</li>
+        </ul>
+      </div>
+      <div class="pricebox"><div class="price">$79.99<small>USD · SHIPPING INCLUDED</small></div><a class="reserve" href="mailto:hersky.ott@gmail.com?subject=Reserve%20Drop%2001%20—%20Embroidered%20Crewneck">Reserve this piece</a></div>
+    </article>
+
+    <article class="product">
+      <div class="placement"><div class="lockup serif">HERSKY</div><div class="where">Front cuff · Flat stitch</div><div class="threads"><span class="dot" style="background:#f3ead8" title="Bone white"></span><span class="dot" style="background:#bc4a12" title="Thread orange"></span></div></div>
+      <div>
+        <span class="drop-tag">Drop 01 · Winter</span>
+        <h3 class="serif">Embroidered Ribbed Beanie</h3>
+        <p class="blank">Ribbed-knit cuff beanie · Ottawa-winter approved</p>
+        <ul class="specs">
+          <li>Embroidery is the only decoration that works properly on knit — print can't</li>
+          <li>Small front-cuff lockup, stitched flat so it sits clean</li>
+          <li>The cheapest way into the stitched line</li>
+        </ul>
+      </div>
+      <div class="pricebox"><div class="price">$39.99<small>USD · SHIPPING INCLUDED</small></div><a class="reserve" href="mailto:hersky.ott@gmail.com?subject=Reserve%20Drop%2001%20—%20Embroidered%20Beanie">Reserve this piece</a></div>
+    </article>
+  </section>
+
+  <hr class="rule">
+
+  <!-- MATERIALS -->
+  <section id="materials">
+    <p class="kicker">Why the cloth comes first</p>
+    <h2 class="serif">Materials library</h2>
+    <p class="section-lede">GSM is grams per square metre — fabric weight. It's the number that decides whether a shirt feels like a giveaway or a garment. The current print store runs standard blanks; this store only runs the heavy end.</p>
+    <table>
+      <thead><tr><th>Blank family</th><th>Used for</th><th>Fabric</th><th>Why it's here</th></tr></thead>
+      <tbody>
+        <tr><td><b>Stanley/Stella</b></td><td>Heavyweight tee</td><td>Organic cotton, ~240 GSM class</td><td>Certified organic, dense hand-feel, holds embroidery without puckering</td></tr>
+        <tr><td><b>AS Colour</b></td><td>Tee / hoodie upgrades</td><td>Premium combed cotton</td><td>Retail-grade cuts — the blanks designer labels use</td></tr>
+        <tr><td><b>Cotton Heritage</b></td><td>Premium hoodie</td><td>65% ring-spun cotton / 35% polyester, 8.5 oz</td><td>Soft inside, structured outside; embroidery sits flat</td></tr>
+        <tr><td><b>Lane Seven</b></td><td>Hoodie / crewneck</td><td>Premium fleece</td><td>Heavy drape, minimal shrinkage, streetwear fit</td></tr>
+        <tr><td><b>Independent Trading Co.</b></td><td>Crewneck</td><td>Premium fleece</td><td>The workhorse premium blank — consistent sizing, long life</td></tr>
+      </tbody>
+    </table>
+    <p class="hero-note">Exact blank per product is confirmed at digitizing before Drop 01 opens for payment — if a blank changes, the product row above changes first. No bait and switch.</p>
+  </section>
+
+  <hr class="rule">
+
+  <!-- EMBROIDERY -->
+  <section id="embroidery">
+    <p class="kicker">How a stitch is born</p>
+    <h2 class="serif">The embroidery process</h2>
+    <p class="section-lede">Print lays ink on top of fabric. Embroidery rebuilds the design in thread, through the fabric. It's slower and costs more per piece — and it's why this store exists as its own format.</p>
+    <div class="steps">
+      <div class="step"><div class="num serif">01</div><h3>Digitizing</h3><p>The HERSKY lockup is redrawn as a stitch file — every line becomes a thread path. Fine detail that can't hold thread is removed honestly, never faked.</p></div>
+      <div class="step"><div class="num serif">02</div><h3>Thread match</h3><p>Colours are matched to real thread: bone white, ink black, thread orange, gold, forest. What you pick is the physical thread that ships.</p></div>
+      <div class="step"><div class="num serif">03</div><h3>Hoop &amp; stitch</h3><p>Each garment is hooped and stitched to order by Fourthwall's fulfillment partners — flat stitch on chests, 3D puff available on the hat.</p></div>
+      <div class="step"><div class="num serif">04</div><h3>Checked &amp; shipped</h3><p>Fourthwall handles checkout, taxes as merchant of record, customer support, and the quality guarantee — a stitch error or defect is replaced or refunded.</p></div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- COMPARE -->
+  <section id="compare">
+    <p class="kicker">Two stores, two jobs</p>
+    <h2 class="serif">Compare the formats</h2>
+    <p class="section-lede">This isn't a replacement — it's a second lane. The research verdict behind the pick is in the table: for embroidery plus premium blanks on a $0/month storefront that handles tax and support for you, Fourthwall tested #1 overall in 2026 roundups; Printful still wins on all-over print range; Apliiq is the phase-2 private-label upgrade (sewn-in woven labels) once the stitched line proves itself.</p>
+    <table>
+      <thead><tr><th></th><th>Current store — Printful</th><th>This store — Fourthwall</th><th>Phase 2 — Apliiq</th></tr></thead>
+      <tbody>
+        <tr><td><b>Format</b></td><td>Infinite design studio, 9,000+ designs</td><td>Curated drops, 5 pieces at a time</td><td>Private-label fashion line</td></tr>
+        <tr><td><b>Best at</b></td><td>All-over print, jerseys, range</td><td>Embroidery + premium blanks</td><td>Woven labels, patches, heaviest blanks (up to ~490 GSM)</td></tr>
+        <tr><td><b>Blanks</b></td><td>Standard to mid premium</td><td>Stanley/Stella, AS Colour, Cotton Heritage, Lane Seven by default</td><td>Premium, branding stack costs extra per piece</td></tr>
+        <tr><td><b>Embroidery</b></td><td>Good — 3D puff, unlimited-colour thread option</td><td>Best overall in 2026 embroidery roundups</td><td>Excellent, plus appliqué patches</td></tr>
+        <tr><td><b>Store cost</b></td><td>Free plan; you run checkout/support</td><td>$0/month, 0% platform fee on physical products; tax + support handled</td><td>Higher per-piece cost; best margins at $35+ retail</td></tr>
+        <tr><td><b>Status</b></td><td>Live at hersky.info/shop</td><td>Drop 01 built here — opens when Jake publishes it on Fourthwall</td><td>Later — after Drop 01 sells</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr class="rule">
+
+  <!-- FAQ -->
+  <section id="faq">
+    <p class="kicker">Straight answers</p>
+    <h2 class="serif">FAQ &amp; policies</h2>
+    <details>
+      <summary>Is Drop 01 open for payment right now?</summary>
+      <p>Not yet — and this page won't pretend otherwise. Drop 01 opens on Jake's existing Fourthwall store (account already created, products staged hidden) the moment he publishes it. Until then, reserving by email is free and takes no payment. The full current catalog is live now at <a href="https://hersky.info/shop">hersky.info/shop</a>.</p>
+    </details>
+    <details>
+      <summary>Why is shipping already in the price?</summary>
+      <p>Jake's standing rule for every store he runs: the price you see is the price you pay for the piece, shipping included. No checkout surprises.</p>
+    </details>
+    <details>
+      <summary>Can I get any of the 9,000+ designs embroidered?</summary>
+      <p>No — and that's deliberate. Detailed full-colour artwork can't be honestly stitched; it would come out muddy. Embroidery here is only the clean HERSKY lockups that digitize properly. Everything else stays on the print store, front and back, exactly as previewed there.</p>
+    </details>
+    <details>
+      <summary>What if my stitching is defective?</summary>
+      <p>Quality is guaranteed on Fourthwall orders: a print/stitch error or visible quality issue is replaced or refunded. Because pieces are made to order, general returns and sizing swaps aren't accepted — check the size notes before ordering.</p>
+    </details>
+    <details>
+      <summary>Who is behind this store?</summary>
+      <p>HERSKY Stitched is run by Jake Hersky (DJ Hersky), Ottawa, Canada — the same person behind hersky.info. Questions: <a href="mailto:hersky.ott@gmail.com?subject=HERSKY%20Stitched%20question">hersky.ott@gmail.com</a>. Follow the drops at <a href="https://www.instagram.com/hersky.store/">@hersky.store on Instagram</a>.</p>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div class="foot">
+    <div>
+      <div class="serif" style="font-size:1.2rem;letter-spacing:.14em">HERSKY <span style="color:#e8b48c">STITCHED</span></div>
+      <small>The embroidery-only second store. Print store: <a href="https://hersky.info/shop">hersky.info/shop</a> · Main hub: <a href="https://hersky.info">hersky.info</a> · Instagram: <a href="https://www.instagram.com/hersky.store/">@hersky.store</a></small>
+    </div>
+    <div>
+      <small>Prices USD, shipping included. Made to order via Fourthwall. This page takes no payment — reservations by email only until Drop 01 publishes.</small>
+    </div>
+  </div>
+  <div class="threadline" aria-hidden="true"></div>
+</footer>
+</body>
+</html>
